@@ -1,20 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>City Temperature App</title>
-    <link rel="stylesheet" href="styles/main.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>City Temperature App</title>
+  <link rel="stylesheet" href="styles/main.css" />
+
+  <style>
+    /* Inline quick styling for testing - move this to main.css if needed */
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to right, #74ebd5, #ACB6E5);
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    .container {
+      text-align: center;
+      padding: 40px 20px;
+      flex-grow: 1;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      color: #fff;
+      margin-bottom: 30px;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+    }
+
+    form {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    #city-input {
+      padding: 10px 15px;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      width: 250px;
+    }
+
+    #search-button {
+      padding: 10px 20px;
+      background-color: #3949ab;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    #search-button:hover {
+      background-color: #303f9f;
+    }
+
+    .result {
+      margin-top: 30px;
+      font-size: 1.5rem;
+      color: #fff;
+    }
+
+    footer {
+      text-align: center;
+      padding: 15px 0;
+      background-color: #3949ab;
+      color: white;
+      font-weight: bold;
+      font-size: 1rem;
+      box-shadow: 0 -2px 8px rgba(0,0,0,0.2);
+    }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <h1>City Temperature Finder</h1>
-        <form id="city-form">
-            <input type="text" id="city-input" placeholder="Enter city name" required />
-            <button id="search-button" type="submit">Get Temperature</button>
-        </form>
-        <div id="result" class="result"></div>
-    </div>
-    <script src="scripts/app.js"></script>
+  <div class="container">
+    <h1>🌤️ City Temperature Finder</h1>
+
+    <form id="city-form">
+      <input type="text" id="city-input" placeholder="Enter city name" required />
+      <button id="search-button" type="submit">Get Temperature</button>
+    </form>
+
+    <div id="result" class="result"></div>
+  </div>
+
+  <footer>Made by Sushant Poudel</footer>
+
+  <script src="scripts/app.js"></script>
 </body>
 </html>
